@@ -18,7 +18,7 @@ export default {
   plugins: [
     /** Enable using HTML as rollup entrypoint */
     html({
-      minify: true,
+      minify: false,
     }),
     /** Resolve bare module imports */
     nodeResolve(),

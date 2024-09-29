@@ -1,0 +1,889 @@
+<!DOCTYPE html><html lang="en"><head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="Description" content="Demonstration for media-tik2">
+
+  <style>
+    :root, html, body {
+      /* margin: 0; */
+      max-width: 90%;
+      padding: 0;
+      background-color: var(--ddd-accent-1);
+      margin: auto;
+
+    }
+    #demo {
+      margin: var(--ddd-spacing-2);
+    }
+    media-tik2 {
+      display: block;
+      margin: auto;
+      max-width: 65%;
+      margin: var(--ddd-spacing-2);
+      border: var(--ddd-border-md);
+      border-radius: var(--ddd-radius-lg);
+    }
+    media-tik2:hover {
+      box-shadow: var(--ddd-boxShadow-sm);
+    }
+    #example {
+      --media-tik2-font-size: var(--ddd-font-size-l);
+      background-color: var(--ddd-accent-2);
+      color: var(--ddd-primary-17);
+    }
+    </style>
+    
+  <title>media-tik2</title>
+</head>
+
+<body>
+  <!-- <div id="demo">
+    <h1>media-tik2</h1>
+    this is going to do whatever the tag's defaults are 
+    <h2>Default</h2>
+    <media-tik2></media-tik2>
+    <h2>Slot usage</h2>
+    <media-tik2 data-accent="2" data-primary="17"><div>Sample slot content</div></media-tik2>
+    <h2>Property usage</h2>
+    <media-tik2 id="example" title="Sample property title"></media-tik2>
+  </div> -->
+
+  <!-- Take HAX, the Web and you further down the rabbit hole -->
+  <!-- <style>
+
+
+    #follow-the-white-rabbit {
+      margin: var(--ddd-spacing-4) auto 64px  16px;
+      background-color: var(--ddd-accent-4);
+    }
+    #follow-the-white-rabbit[open] summary {
+      background-color: var(--ddd-accent-4) !important;
+    }
+    #follow-the-white-rabbit[open] .content {
+      padding: 0 var(--ddd-spacing-4);
+    }
+    #follow-the-white-rabbit ul,
+    #follow-the-white-rabbit li {
+      padding: 0;
+      margin: 0;
+    }
+    #follow-the-white-rabbit li {
+      font-size: var(--ddd-font-size-xs);
+      list-style: none;
+    }
+    #follow-the-white-rabbit li strong,
+    #follow-the-white-rabbit li a {
+      padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
+      color: black;
+      display: block;
+      font-weight: bold;
+    }
+    #follow-the-white-rabbit li:focus-within a,
+    #follow-the-white-rabbit li:hover a {
+      background-color: black;
+      color: yellow;
+    }
+  </style>
+  <details id="follow-the-white-rabbit" open>
+    <summary>How to Develop</summary>
+    <div class="content">
+      <p>
+      
+        <strong>Checkout project on github:</strong> <a href="https://github.com/andyux01/media-tik2" target="_blank" rel="nofollow">andyux01/media-tik2</a>
+        
+      </p>
+      <p>
+        You can edit the current page by modifying <code>index.html</code><br />
+        To edit your <strong>media-tik2</strong> tag, modify <code>src/media-tik2.js</code>.
+        This file contains all the HTML, CSS and JavaScript used to render your elements above!
+      </p>
+      <p>
+        Web components are easy to follow once you get used to their pattern.
+        Below are links to help on your journey. Good luck, we need you!
+      </p>
+      <ul>
+        <li><a href="https://oer.hax.psu.edu/bto108/sites/haxcellence/documentation/ddd" target="_blank">🧑‍🎨 Learn DDD HAX Design system</a></li>
+        <li><a href="https://lit.dev/playground/" target="_blank" rel="nofollow">🔥 Learn Lit</a></li>
+        <li><a href="https://hax.psu.edu" target="_blank">🧙 HAX The Web @ Penn State</a></li>
+      </ul>
+      <h2>Join and Share HAX</h2>
+      <ul>
+        <li><a href="https://github.com/haxtheweb/issues/issues" target="_blank" rel="nofollow">🔮 Ideas to HAX Harder, Better, Faster, Stronger</a></li>
+        <li><a href="https://bit.ly/hax-the-linkedin" target="_blank" rel="nofollow">👔 Share on LinkedIn</a></li>
+        <li><a href="https://bit.ly/hax-the-x" target="_blank" rel="nofollow">🧵 Tweet on X</a></li>
+        <li><a href="https://bit.ly/hax-discord" target="_blank" rel="nofollow">💬 Join Community</a></li>
+      </ul>
+      <h2>Learn the languages and tools</h2>
+      <ul>
+        <li><a href="https://w3schools.com" target="_blank" rel="nofollow">🌐 Learn HTML</a></li>
+        <li><a href="https://web.dev/learn/css/" target="_blank" rel="nofollow">🎨 Learn CSS</a></li>
+        <li><a href="http://Javascript.info" target="_blank" rel="nofollow">💻 Learn JavaScript (JS)</a></li>
+        <li><a href="https://gitimmersion.com" target="_blank" rel="nofollow">🦺 Learn Git / Github</a></li>
+        <li><a href="https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/" target="_blank" rel="nofollow">📦 Learn NPM</a></li>
+        <li><a href="http://learnux.io" target="_blank" rel="nofollow">📐 Learn UX / UI development</a></li>
+      </ul>
+      <h2>Find purpose and inspiration</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=eC7xzavzEKY" target="_blank" rel="nofollow">🐟 This is Water - David Foster Wallace</a></li>
+        <li><a href="https://www.youtube.com/watch?v=kYfNvmF0Bqw" target="_blank" rel="nofollow">🏗️ Secrets of Life - Steve Jobs</a></li>
+        <li><strong>💡 <em>Never. Stop. Innovating.</em></strong></li>
+      </ul>
+    </div>
+  </details> -->
+
+  <media-tik2>
+    <div slot="content-1">
+      <h2>METODE BERPIKIR KRITIS</h2>
+
+      <learning-component subtitle="KEBOCORAN DATA" accent-color="yellow" title="Amati" icon="courseicons:strategy">
+        <p data-hax-lock="data-hax-lock">Pada suatu sore, Pak Anton sedang membaca buku di ruang belajar. Namun,
+          tiba-tiba
+          listrik padam. Setelah dilakukan pengecekan, ternyata pulsa listrik habis. Pak Anton
+          kemudian mengambil smartphone-nya untuk membeli token pulsa listrik melalui aplikasi
+          mobile banking. Namun, aplikasi mobile banking yang biasanya lancar, mengalami kendala.
+          Username dan password yang biasanya Pak Anton gunakan tiba-tiba tidak dapat diakses.
+          Menurut kalian, apa langkah-langkah yang seharusnya dilakukan oleh Pak Anton dalam
+          menghadapi situasi tersebut?<strong></strong>
+
+        </p>
+      </learning-component>
+
+
+      <p>Di kelas X, kalian telah mempelajari dampak positif maupun dampak negatif dari suatu
+        produk informatika. Di kelas XI, kalian telah diajarkan tentang bagaimana
+        <mark>berpikir kritis</mark>dalam menanggapi kasus-kasus komputasi dengan memanfaatkan
+        metode <abbr title="What (apa), Who (siapa), When (kapan), Where (di mana), Why (kenapa), dan How (bagaimana)">5W+1H</abbr>
+        dan
+        <vocab-term term="metode saintifik" information="  Menurut Permendikbud Nomor 103 Tahun 2014, pendekatan saintifik dioperasionalisasikan dalam bentuk kegiatan pembelajaran yang di dalamnya memuat pengalaman belajar dalam bentuk kegiatan mengamati, menanya, mengumpulkan informasi (mencoba), menalar (mengasosiasi), dan mengomunikasikan." links="https://cdn.undiksha.ac.id/wp-content/uploads/sites/12/2021/03/19224132/Pendekatan-Saintifik-dalam-Pembelajaran-1.pdf" data-hax-lock="data-hax-lock">metode saintifik</vocab-term>, di kelas XII ini, kalian akan diperkaya dengan
+        mengenal
+        beberapa metode analisis dalam berpikir kritis dan juga mendalami salah satu metode
+        tersebut.
+      </p>
+
+      <h3 data-original-level="H3" id="header-aa14b055-7bd7-c752-4c00-7743869463ad" data-font-weight="medium" data-font-size="m" data-margin="m" data-padding="m" data-border-radius="xl" data-border="md" data-box-shadow="sm" data-primary="12" data-design-treatment="horz-50p"><span>di kelas XII ini, kalian akan
+          diperkaya dengan mengenal beberapa metode analisis dalam berpikir kritis dan juga mendalami salah satu metode
+          tersebut</span></h3>
+
+
+      <p>Berpikir tentang akar penyebab masalah dan tren terkini, kita dapat mengambil langkah-langkah
+        yang lebih efektif untuk melindungi diri dari ancaman keamanan siber.</p>
+      <p>Keamanan jaringan adalah upaya untuk melindungi sistem komputer dan jaringan dari
+        akses, penggunaan, pengungkapan, gangguan, modifikasi, atau penghancuran informasi
+        yang tidak sah. Singkatnya, ini adalah upaya untuk menjaga keamanan data dan sistem
+        kita.</p>
+      <p>Keamanan jaringan sangat penting karena data telah menjadi aset yang sangat berharga.
+        Jika data kita bocor, bisa menyebabkan kerugian finansial, reputasi, dan bahkan mengancam
+        keamanan nasional. Beberapa ancaman umum adalah virus, malware, phishing, ransomware,
+        DDoS attack, dan masih banyak lagi</p>
+
+
+
+      <learning-component title="PENILAIAN" subtitle="TULIS 1" type="assessment" accent-color="red" data-hax-lock="data-hax-lock" icon="lrn:assessment">
+        <p>Tulis manfaat portal password.google.com1</p>
+      </learning-component>
+
+
+
+      <!-- akhir div -->
+    </div>
+
+    <div slot="content-2">
+
+
+      <media-image source="./files/skimming.jpeg" card="" citation="Aksi Skimming" accent-color="grey" size="wide" offset="none"></media-image>
+
+
+      <p>Beberapa metode analisis berpikir kritis dari suatu peristiwa, yaitu <i>Critical Incident Technique (CIT),
+          Diagram Fishbone (Diagram Ishikawa), Root Cause Analysis, Pareto Analysis (80/20 Rule), </i>dan <i>Decision
+          Trees</i>.</p>
+      <p><b>Critical Incident Technique (CIT)</b>
+
+      </p>
+      <p>Metode ini melibatkan pengumpulan dan analisis insiden-insiden kritis yang memiliki
+        dampak besar pada situasi atau masalah tertentu.</p>
+      <p><b>Diagram Fishbone (Diagram Ishikawa)</b>
+
+      </p>
+      <p>Metode ini sering digunakan untuk mengidentifikasi faktor-faktor yang dapat menyebabkan
+        masalah tertentu. Metode ini membantu dalam memvisualisasikan hubungan antara berbagai
+        faktor yang dapat berkontribusi pada situasi tersebut.</p>
+      <p><b>Root Cause Analysis</b>
+
+      </p>
+      <p>Metode ini bertujuan untuk mengidentifikasi akar penyebab dari masalah tertentu,
+        bukan hanya gejala atau dampaknya saja. Metode ini membantu dalam mencegah masalah
+        yang sama muncul di masa depan.</p>
+      <p><b>Pareto Analysis (80/20 Rule)</b>
+
+      </p>
+      <p>Metode ini didasarkan pada konsep bahwa sebagian kecil penyebab (20%) seringkali
+        berkontribusi terhadap sebagian besar masalah (80%). Ini membantu dalam mengidentifikasi
+        area fokus untuk perbaikan.</p>
+      <p><b>Decision Trees</b>
+
+      </p>
+      <p>Metode ini merupakan representasi grafis dari serangkaian keputusan dan konsekuensinya.
+        Metode ini digunakan untuk membantu pengambilan keputusan dalam situasi yang kompleks.
+        Untuk materi pada bab ini, kalian akan belajar metode analisis Diagram Ishikawa).</p>
+
+
+        <media-image source="./files/Decision-tree.webp" card="" citation="Diagram Ishikawa" accent-color="grey" size="wide" offset="none"></media-image>
+
+
+
+      <p>Berpikir tentang akar penyebab masalah dan tren terkini, kita dapat mengambil langkah-langkah
+        yang lebih efektif untuk melindungi diri dari ancaman keamanan siber.</p>
+      <p>Keamanan jaringan adalah upaya untuk melindungi sistem komputer dan jaringan dari
+        akses, penggunaan, pengungkapan, gangguan, modifikasi, atau penghancuran informasi
+        yang tidak sah. Singkatnya, ini adalah upaya untuk menjaga keamanan data dan sistem
+        kita.</p>
+      <p>Keamanan jaringan sangat penting karena data telah menjadi aset yang sangat berharga.
+        Jika data kita bocor, bisa menyebabkan kerugian finansial, reputasi, dan bahkan mengancam
+        keamanan nasional. Beberapa ancaman umum adalah
+        <vocab-term term="virus" information="Virus komputer adalah jenis perangkat lunak berbahaya, atau malware, yang menginfeksi komputer dan merusak data serta perangkat lunaknya." links="[{&quot;title&quot;:&quot;[{\&quot;title\&quot;:\&quot;[]\&quot;}]&quot;}]">virus</vocab-term>
+        ,
+        <vocab-term term="malware" information="Malware (Malicious Software) adalah perangkat lunak yang dengan sengaja dibuat untuk tujuan memasuki dan meretas sistem komputer, server, atau jaringan tanpa diketahui oleh pemilik perangkat yang memiliki kewenangan." links="[{&quot;title&quot;:&quot;[{\&quot;title\&quot;:\&quot;[]\&quot;}]&quot;}]">malware</vocab-term>
+        ,
+        <vocab-term term="phishing" information="Web phising adalah upaya memanfaatkan website palsu untuk mengelabui calon korban. Website untuk phising akan terlihat mirip dengan website resmi dan menggunakan nama domain yang mirip. Hal ini disebut domain spoofing." links="[{&quot;title&quot;:&quot;[{\&quot;title\&quot;:\&quot;[]\&quot;}]&quot;}]">phishing</vocab-term>
+        ,
+        <vocab-term term="ransomware" information="Ransomware adalah serangan malware yang dikirim peretas untuk mengunci dan mengenkripsi perangkat komputer milik korban. Lalu, peretas akan meminta uang tebusan untuk memulihkan aksesnya." links="[{&quot;title&quot;:&quot;[{\&quot;title\&quot;:\&quot;[]\&quot;}]&quot;}]">ransomware</vocab-term>
+        ,
+        <vocab-term term="DDoS attack" information="  Serangan DDoS menargetkan situs web dan server dengan mengganggu layanan jaringan yang bertujuan untuk menghabiskan sumber daya aplikasi. Pelaku di balik serangan ini membanjiri situs dengan lalu lintas yang menyimpang, sehingga fungsionalitas situs web menjadi buruk atau membuatnya offline sama sekali.
+  " links="[{&quot;title&quot;:&quot;[{\&quot;title\&quot;:\&quot;[]\&quot;}]&quot;}]">DDoS attack</vocab-term>
+        , dan masih banyak lagi
+      </p>
+
+
+
+      <multiple-choice question="Jika Anda menemukan saldo rekening Anda berkurang tanpa adanya transaksi yang Anda lakukan, tindakan pertama yang sebaiknya Anda lakukan adalah:" max-attempts="0" typeof="oer:Assessment" resource="#543016ea-4d83-e00c-1e13-27ffd0de1d64" prefix="oer:http://oerschema.org/ schema:http://schema.org/ dc:http://purl.org/dc/terms/ foaf:http://xmlns.com/foaf/0.1/ cc:http://creativecommons.org/ns# bib:http://bib.schema.org " quiz-name="default" single-option="" data-hax-lock="data-hax-lock">
+        <input type="checkbox" value="Memblokir kartu ATM" role="textbox">
+        <input type="checkbox" value="Menghubungi bank untuk melaporkan kejadian tersebut" correct="correct">
+        <input type="checkbox" value="Mengganti password akun internet banking">
+        <input type="checkbox" value="Memeriksa kembali mutasi rekening secara detail">
+        <input type="checkbox" value="Semua jawaban di atas benar">
+      </multiple-choice>
+
+
+
+      <p>Contoh kasus di mana seorang nasabah menemukan saldo rekeningnya berkurang secara
+        misterius tanpa melakukan transaksi apapun.&nbsp;</p>
+      <p resource="#ba4e9ea0-954a-0105-3404-3e5e0c4017d9">Denpasar: Kisah tragis dialami seorang petani di Buleleng
+        Bali. Uang tabungannya
+        sejak 2016 senilai Rp 248 juta di rekening Bank Rakyat Indonesia (BRI) raib atau
+        hilang mendadak. Uang ini dikumpulkan susah payah sejak tujuh tahun lalu, lenyap
+        dalam hitungan kurang lima menit. Korban bernama Nyoman Werdiasa. Bahkan, uang ratusan
+        juta yang hilang itu bukan hanya miliknya, tetapi juga uang milik ibunya yang sudah
+        uzur atau berusia sekitar 70-an tahun. Hanya saja ikut menitip di rekeningnya supaya
+        aman. Nyoman Werdiasa mulai membuka rekening BRI Simpedes dan mulai menabung di BRI
+        Banyuatis, Kecamatan Banjar, Kabupaten Buleleng Bali sejak 4 Oktober 2016 lalu.&nbsp;</p>
+      <citation-element creator="Media Indonesia" license="by" title="Dana Nasabah BRI Milik Seorang Petani di Buleleng Senilai Rp248 Juta Raib" source="https://www.metrotvnews.com/read/Ky6CBgg6-dana-nasabah-bri-milik-seorang-petani-di-buleleng-senilai-rp248-juta-raib" date="29/09/2024" scope="sibling" license-name="Attribution" license-link="https://creativecommons.org/licenses/by/4.0/"></citation-element>
+      <p>Mari kita analisis lebih dalam kasus berkurangnya saldo rekening secara misterius
+        dengan pendekatan yang lebih spesifik, yaitu dengan membagi faktor-faktor penyebab
+        menjadi empat kategori utama: Manusia, Teknologi, Proses, dan Lingkungan. Kita akan
+        fokus pada dua kategori yang Anda minta, yaitu Manusia dan Teknologi, dengan mempertimbangkan
+        perkembangan terkini.</p>
+      <p>Mungkin karena kesalahan dalam sistem perbankan, kesalahan pencatatan, atau bug
+        dalam sistem. Petani mengalami penipuan:
+        <vocab-term term="Skimming" information="Ttindakan pencurian informasi kartu kredit atau debit dengan cara menyalin informasi yang terdapat pada strip magnetik kartu kredit atau debit secara ilegal." links="[{&quot;title&quot;:&quot;[{\&quot;title\&quot;:\&quot;[{\\\&quot;title\\\&quot;:\\\&quot;[{\\\\\\\&quot;title\\\\\\\&quot;:\\\\\\\&quot;[]\\\\\\\&quot;}]\\\&quot;}]\&quot;}]&quot;}]">Skimming</vocab-term>
+        ,
+        <vocab-term term="phishing" information="lihat di atas" popover-mode="" links="[{&quot;title&quot;:&quot;[{\&quot;title\&quot;:\&quot;[{\\\&quot;title\\\&quot;:\\\&quot;[{\\\\\\\&quot;title\\\\\\\&quot;:\\\\\\\&quot;[]\\\\\\\&quot;}]\\\&quot;}]\&quot;}]&quot;}]">phishing</vocab-term>
+        , atau bentuk penipuan lainnya. Nasabah terkana biaya tambahan: potongan biaya yang
+        tidak diketahui nasabah, seperti biaya administrasi, biaya overdraft, atau biaya
+        transaksi otomatis. Adanya transaksi tak terotorisasi: Transaksi yang dilakukan tanpa
+        izin nasabah, seperti autodebet yang lupa dibatalkan.
+      </p>
+
+
+      <learning-component subtitle="TULIS 2" type="assessment" accent-color="red" title="Penilaian" icon="lrn:assessment">
+        <p>Tulis manfaat belajar kritis dengan keamanan data pribadi?</p>
+      </learning-component>
+
+
+      <!-- akhir div -->
+    </div>
+
+
+
+    <div slot="content-3">
+
+      <media-image source="./files/Ishikawa_Fishbone_Diagram.svg.png" card="" citation="Diagram Ishikawa" accent-color="grey" size="wide" offset="none"></media-image>
+      
+      <br>
+
+      <learning-component accent-color="orange" icon="hax:ticket" subtitle="DIAGRAM TULANG IKAN" title="TUJUAN PEMBELAJARAN">
+        <p>Setelah mempelajari materi Berpikir Kritis Diagram Tulang Ikan (Fishbone) siswa
+          akan ...</p>
+        <ol>
+          <li>Memahami konsep dasar tentang berpikir kritis keamanan data</li>
+          <li>Siswa dapat menjelaskan fungsinya berpikir kritis tentang keamanan data</li>
+          <li>Siswa dapat mengidentifikasi langkah-langkah berpikir kritis</li>
+        </ol>
+      </learning-component>
+
+
+      <rpg-character seed="btopro" accent-color="orange" accessories="7" height="142" width="113" base="0" face="2" face-item="1" hair="5" pants="5" shirt="5" skin="0" hat-color="1" hat="none" leg="L" speed="500" reduce-motion=""></rpg-character>
+      <rpg-character accent-color="orange" seed="8cjljqi8od" accessories="2" height="142" width="113" base="1" face="1" face-item="3" hair="6" pants="0" shirt="9" skin="0" hat-color="2" hat="none" leg="L" speed="100" walking="" fire="" reduce-motion=""></rpg-character>
+
+
+      <learning-component accent-color="red" type="assessment" subtitle="TULIS 3" title="Assessment" icon="lrn:assessment" data-grid-saved-settings="{}">
+        <p>Tuliskan 1 tujuan pembelajaran materi mengenali kritis dengan keaman yang paling dipahami dan sertakan
+          alasannya!</p>
+      </learning-component>
+
+
+      <!-- akhir div -->
+    </div>
+
+    <div slot="content-4">
+
+      <media-image source="./files/fishbone-diagram.jpg" card="" citation="Diagram Ishikawa" accent-color="grey" size="wide" offset="none"></media-image>
+
+
+      <p>Dalam menjalani kehidupan, kamu pasti akan selalu menemukan permasalahan, baik yang
+        bersifat individu, kelompok maupun organisasi. Oleh karena itu, kamu memerlukan kemampuan
+        analisis masalah yang baik, salah satu caranya bisa dilakukan dengan cara membuat
+        fishbone diagram. Diagram ini dinamakan fishbone karena bentuknya yang mirip dengan
+        struktur tulang ikan.</p>
+      <p>
+        <em>Fishbone diagram</em><span> </span>(diagram tulang ikan — karena bentuknya seperti
+        tulang ikan) sering juga disebut<span> </span><em>Cause-and-Effect Diagram</em><span> </span>atau<span>
+        </span><em>Ishikawa Diagram</em><span> </span>diperkenalkan
+        oleh Dr. Kaoru Ishikawa, seorang ahli pengendalian kualitas dari Jepang, sebagai
+        satu dari tujuh alat kualitas dasar (<em>7 basic quality tools</em>).<span> </span><em>Fishbone
+          diagram</em><span> </span>digunakan
+        ketika kita ingin mengidentifikasi kemungkinan penyebab masalah dan terutama ketika
+        sebuah<span> </span><em>team</em><span> </span>cenderung jatuh berpikir pada rutinitas
+        (Tague, 2005, p. 247).</p>
+      <p>
+        Suatu tindakan dan langkah<span> </span><em>improvement</em><span> </span>akan lebih
+        mudah dilakukan jika masalah dan akar&nbsp; penyebab masalah sudah ditemukan. Manfaat<span> </span><em>fishbone
+          diagram</em><span> </span>ini
+        dapat menolong kita untuk menemukan akar penyebab masalah secara<span> </span><em>user friendly</em>,<span>
+        </span><em>tools</em><span> </span>yang<span> </span><em>user friendly</em><span> </span>&nbsp;disukai
+        orang-orang di industri manufaktur di mana proses di sana terkenal memiliki banyak
+        ragam variabel yang berpotensi menyebabkan munculnya permasalahan (Purba, 2008, para.
+        1–6). &nbsp;</p>
+      <p>Fishbone diagram adalah salah satu metode untuk menganalisis akar permasalahan dan
+        mengetahui risiko dari suatu hal sejak awal.&nbsp;Diagram ini bisa digunakan oleh
+        perusahaan untuk melakukan analisis terhadap setiap permasalahan yang dihadapi. Dengan
+        menggunakan metode ini, kamu bisa melakukan analisis terhadap akar penyebab suatu
+        permasalah dan menemukan solusi yang tepat.</p>
+      <br>
+      <multiple-choice question="Siapa yang pertama kali memperkenalkan diagram tulang ikan atau diagram fishbone?" single-option="" randomize="" max-attempts="0" typeof="oer:Assessment" resource="#9207b04f-42c4-28e8-1cea-ac617515199e" prefix="oer:http://oerschema.org/ schema:http://schema.org/ dc:http://purl.org/dc/terms/ foaf:http://xmlns.com/foaf/0.1/ cc:http://creativecommons.org/ns# bib:http://bib.schema.org " quiz-name="default" data-padding="xs" data-margin="center" data-hax-lock="data-hax-lock">
+        <input type="checkbox" value=" Edward Deming" role="textbox">
+        <input type="checkbox" value="Kaoru Ishikawa" correct="correct">
+        <input type="checkbox" value="Philip Crosby">
+        <input type="checkbox" value="W. Edwards Deming">
+        <input type="checkbox" value="Taiichi Ohno">
+      </multiple-choice>
+      <br>
+
+      <learning-component accent-color="red" type="assessment" subtitle="TULIS 4" title="Assessment" icon="lrn:assessment" data-grid-saved-settings="{}">
+        <p>Tulis pengertian diagram tulang ikan beserta contoh masalah!</p>
+      </learning-component>
+
+      <!-- akhir div -->
+    </div>
+    <div slot="content-5">
+
+      <h2>Perundungan</h2>
+
+      <media-image source="./files/bully.jpg" card="" citation="Diagram Ishikawa" accent-color="grey" size="wide" offset="none"></media-image>
+
+      <p>Bullying atau perundungan di sekolah adalah perilaku agresif yang dilakukan secara
+        berulang-ulang oleh seseorang atau sekelompok siswa yang memiliki kekuasaan terhadap
+        siswa lain yang dipandang lebih lemah dengan tujuan menyakiti korban. Perlakuan tersebut
+        membuat siswa yang menjadi korban merasa tertekan, takut, trauma, dan tak berdaya
+        (Antonius P.S. Wibowo, 2019). Pada kasus anak , dampak perundungan terlihat dari
+        sikapnya yang tidak mau pergi ke sekolah dan meminta untuk dipindahkan ke sekolah
+        lain. Lalu bagaimana menyelesaikan persoalan ini?&nbsp;</p>
+      <p>Pelaku peristiwa ini perlu melaporkan kasus ini kepada kepala sekolah. Sebab, perlindungan
+        terhadap anak dari tindak kekerasan di lingkungan sekolah memang tanggung jawab pendidik
+        dan kepala sekolah. Ketentuan ini disebutkan dalam Pasal 54 Undang-Undang Nomor 35
+        Tahun 2014 tentang Perubahan atas Undang-Undang Nomor 23 Tahun 2002 tentang Perlindungan
+        Anak.</p>
+      <p>Kejadian bullying terpapar dan terbiasa dengan lingkungan yang menormalkan kekerasan,
+        baik fisik maupun verbal. Ini bisa berasal dari keluarga, lingkungan sosial, atau
+        media yang sering menampilkan adegan kekerasan. Kurangnya empati misalnya seseorang
+        tampaknya kesulitan untuk menempatkan diri pada posisi orang lain dan memahami dampak
+        tindakannya. Ini bisa disebabkan oleh kurangnya pendidikan emosional atau pengalaman
+        traumatis di masa lalu. Siklus Kekerasan: Manusia terjebak dalam siklus kekerasan,
+        di mana ia mengalami kekerasan dan kemudian cenderung mengulangi pola yang sama pada
+        orang lain.</p>
+      <strong>Justifikasi:</strong> <strong>&nbsp;Siklus berulang:</strong>
+      <p>Akar masalah dari perilaku abusive dalam transkrip tersebut adalah kombinasi dari
+        faktor individu, sosial, dan situasional. Untuk mengatasi masalah ini, diperlukan
+        pendekatan yang komprehensif yang melibatkan intervensi dini, pendidikan, terapi,
+        dan dukungan sosial.</p>
+
+
+      <h2 id="header-3b0166b9-cb32-2bcf-ea1c-b64f25409f19"><strong>Langkah-langkah Pencegahan dan
+          Penanggulangan:</strong></h2>
+
+      <strong>Intervensi dini:</strong>
+      Identifikasi anak-anak yang menunjukkan tanda-tanda
+      perilaku agresif dan berikan mereka dukungan yang tepat.<strong>Pendidikan:</strong>
+      Melakukan
+      pendidikan tentang kekerasan, empati, dan resolusi konflik sejak dini.<strong>Terapi:</strong>
+      Memberikan
+      terapi bagi pelaku kekerasan untuk membantu mereka memahami akar masalah dan mengubah
+      perilaku mereka.<strong>Dukungan sosial:</strong>
+      Menyediakan dukungan bagi korban
+      kekerasan dan keluarga mereka.<strong>Perubahan kebijakan:</strong>
+      Membuat kebijakan
+      yang lebih ketat untuk mencegah dan menangani kekerasan.
+
+      <tagging-question question="Penyebab perilaku bully (Pilih 5 yang benar)" data-primary="15">
+        <input type="checkbox" value="Justifikasi kekerasan" correct="correct">
+        <input type="checkbox" value="Trauma masa lalu" correct="correct">
+        <input type="checkbox" value="Pribadi agresif" correct="correct">
+        <input type="checkbox" value="Stres" correct="correct">
+        <input type="checkbox" value="Budaya" correct="correct">
+        <input type="checkbox" value="Hubungan saudara">
+        <input type="checkbox" value="Tingkat lantai rumah">
+
+      </tagging-question>
+      <p resource="#63ec6a6d-e11f-5460-e466-8ef7bf7f6dc2">Komnas Perempuan: lembaga pemerintah yang fokus pada
+        perlindungan perempuan dari
+        segala bentuk kekerasan. Puskesmas: menyediakan layanan kesehatan dasar, termasuk
+        konseling untuk korban kekerasan. Rumah Sakit: menyediakan layanan medis untuk korban
+        kekerasan fisik. Lembaga Swadaya Masyarakat: banyak LSM yang fokus pada isu kekerasan,
+        seperti kekerasan dalam rumah tangga, kekerasan seksual, dan kekerasan terhadap anak.
+      </p>
+      <p>
+        Akar
+        masalah dari perilaku abusive dalam transkrip tersebut adalah kombinasi dari faktor
+        individu, sosial, dan situasional. Untuk mengatasi masalah ini, diperlukan pendekatan
+        yang komprehensif yang melibatkan intervensi dini, pendidikan, terapi, dan dukungan
+        sosial.</p>
+
+      <citation-element creator="Sri Agustini" license="by" title="Langkah-langkah Pencegahan" source="https://koran.tempo.co/read/klinik-hukum-perempuan/489786/penyelesaian-kasus-bullying" date="30/09/2024" scope="sibling" license-name="Attribution" license-link="https://creativecommons.org/licenses/by/4.0/"></citation-element>
+      <br>
+
+
+      <learning-component accent-color="red" type="assessment" subtitle="TULIS 5" title="Assessment" icon="lrn:assessment" data-grid-saved-settings="{}">
+        <p>Tulis beberapa contoh masalah teknologi sehari-hari yang dapat dianalisis menggunakan diagram tulang ikan</p>
+      </learning-component>
+
+
+      <!-- akhir div -->
+
+    </div>
+    <div slot="content-6">
+      <h2>Langkah-langkah membuat diagram tulang ikan</h2>
+      <!-- <h2 data-original-level="H2" id="header-dfa62e83-48d7-b25c-d497-7c400eed94ec" style="font-family: Roboto, &quot;Franklin Gothic Medium&quot;, Tahoma, sans-serif; font-weight: var(--ddd-font-weight-bold); margin: var(--ddd-spacing-8) 0 var(--ddd-spacing-4); padding: 0px; font-size: var(--ddd-theme-h2-font-size); color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Langkah-langkah membuat diagram tulang ikan</h2> -->
+
+
+
+
+      <br>
+
+      <h4 data-original-level="H4" id="header-b97bc7fa-bd57-4a90-7882-214eb41f6e6d" class="haxcms-copyable" style="font-family: Roboto, &quot;Franklin Gothic Medium&quot;, Tahoma, sans-serif; font-weight: var(--ddd-font-weight-bold); margin-top: 0px; margin-right: ; margin-bottom: ; margin-left: ; padding: 0px; font-size: var(--ddd-theme-h4-font-size); background-image: url(&quot;https://cdn.hax.cloud/cdn/build/es6/node_modules/@haxtheweb/simple-icon/lib/simple-icons.js/../svgs/icons/link.svg&quot;); background-position: right center; background-repeat: no-repeat; background-size: 36px; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+        Langkah 1: Menyepakati pernyataan masalah</h4>
+
+      <media-image source="./files/fishbone-step-1.png" card="" citation="Diagram Ishikawa" accent-color="grey" size="wide" offset="none"></media-image>
+
+
+      <ol>
+        <li>Sepakati sebuah pernyataan masalah (<em>problem statement</em>). Pernyataan masalah
+          ini diinterpretasikan sebagai “effect”, atau secara visual dalam <em>fishbone</em> seperti
+          “kepala ikan”.</li>
+        <li>Tuliskan masalah tersebut di tengah <em>whiteboard</em> di sebelah paling kanan, misal:
+          “Bahaya Potensial Pembersihan Kabut Oli”.</li>
+        <li>Gambarkan sebuah kotak mengelilingi tulisan pernyataan masalah tersebut dan buat
+          panah horizontal panjang menuju ke arah kotak (lihat Gambar 1).</li>
+      </ol>
+
+
+      <multiple-choice question="Langkah pertama yang paling tepat dalam membuat diagram tulang ikan untuk menganalisis bahaya pembersihan kabut oli adalah:" single-option="" randomize="" max-attempts="0" typeof="oer:Assessment" resource="#eb13a718-784b-94fc-7f2d-f6bf9ac43116" prefix="oer:http://oerschema.org/ schema:http://schema.org/ dc:http://purl.org/dc/terms/ foaf:http://xmlns.com/foaf/0.1/ cc:http://creativecommons.org/ns# bib:http://bib.schema.org " quiz-name="default" data-hax-lock="data-hax-lock">
+        <input type="checkbox" value="Menentukan tindakan perbaikan untuk mengatasi masalah yang ditemukan.  ">
+        <input type="checkbox" value="Menghitung biaya yang dibutuhkan untuk mengatasi masalah.  ">
+        <input type="checkbox" value="Menentukan kategori penyebab potensial, seperti manusia, mesin, metode, material, dan lingkungan.  " correct="correct">
+        <input type="checkbox" value="Membuat daftar semua bahan kimia yang digunakan dalam proses pembersihan.">
+        <input type="checkbox" value="Mengidentifikasi semua peralatan yang digunakan dalam proses pembersihan. ">
+      </multiple-choice>
+
+      <p>
+        Tentukan masalah utama yang ingin Anda pecahkan. Ini adalah "kepala ikan" Anda. Mengapa Perilaku bully Ini
+        Berbahaya? Kenapa motor rusak? Kenapa ada normalisasi Kekerasan/bully? Kenapa ada norma budaya yang mendukung
+        kekerasan atau hierarki gender. Kenapa ada perselingkuhan? Kenapa terjadi perilaku Berkata Kotor ?
+      </p>
+
+
+      <learning-component accent-color="red" type="assessment" subtitle="TULIS 6" title="DISKUSI/KOLABORASI" icon="lrn:assessment" data-grid-saved-settings="{}">
+        <p>Buat 2 pertanyaan tentang permasalahan utama/potensial tentang teknologi ketika berdiskusi dengan teman
+          sekolompok?</p>
+      </learning-component>
+      <!-- akhir div -->
+
+    </div>
+
+
+    <div slot="content-7">
+
+
+      <h4>Langkah 2: Mengidentifikasi kategori-kategori</h4>
+
+
+      <media-image source="./files/fishbone-step-2.png" card="" citation="Langkah-langkah ke 2" "="" accent-color=" grey" size="wide" offset="none"></media-image>
+
+
+      <p>Dari garis horisontal utama, buat garis diagonal yang menjadi “cabang”. Setiap cabang
+        mewakili “sebab utama” dari masalah yang ditulis. Sebab ini diinterpretasikan sebagai
+        “cause”, atau secara visual dalam fishbone seperti “tulang ikan”.&nbsp;</p>
+      <p>Kategori sebab utama mengorganisasikan sebab sedemikian rupa sehingga masuk akal
+        dengan situasi. Kategori-kategori ini antara lain:</p>
+      <ul style="font-size: var(--ddd-theme-body-font-size); display: flex; flex-flow: column; gap: var(--ddd-spacing-3); font-family: var(--ddd-font-primary); margin: 0 0 var(--ddd-spacing-6) 0; list-style: square; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; caret-color: var(--hax-ui-caret-color, auto);">
+        <li><strong>Kategori 6M </strong>yang biasa digunakan dalam industri manufaktur:</li>
+        <ul style="font-size: var(--ddd-theme-body-font-size); display: flex; flex-flow: column; gap: var(--ddd-spacing-3); font-family: var(--ddd-font-primary); margin: 0 0 var(--ddd-spacing-6) 0; list-style: square;">
+          <li><strong><em>Machine</em></strong> (mesin atau teknologi),</li>
+          <li><strong><em>Method</em></strong> (metode atau proses),</li>
+          <li><strong><em>Material</em></strong> (termasuk <em>raw material</em>, <em>consumption</em>,
+            dan informasi),</li>
+          <li><strong><em>Man Power</em></strong> (tenaga kerja atau pekerjaan fisik) / <strong><em>Mind
+                Power</em></strong> (pekerjaan
+            pikiran: <em>kaizen</em>, saran, dan sebagainya),</li>
+          <li><strong><em>Measurement</em></strong> (pengukuran atau inspeksi), dan</li>
+          <li><strong><em>Milieu</em></strong> / <strong><em>Mother Nature</em> </strong>(lingkungan).</li>
+        </ul>
+        <li><strong>Kategori 8P </strong>yang biasa digunakan dalam industri jasa:
+          <ul style="font-size: var(--ddd-theme-body-font-size); display: flex; flex-flow: column; gap: var(--ddd-spacing-3); font-family: var(--ddd-font-primary); margin: 0 0 var(--ddd-spacing-6) 0; list-style: square; caret-color: var(--hax-ui-caret-color, auto);">
+            <li><strong><em>Product</em></strong> (produk/jasa),</li>
+            <li><strong><em>Price</em></strong> (harga),</li>
+            <li><strong><em>Place</em></strong> (tempat),</li>
+            <li><strong><em>Promotion</em></strong> (promosi atau hiburan),</li>
+            <li><strong><em>People</em></strong> (orang),</li>
+            <li><strong><em>Process</em></strong> (proses),</li>
+            <li><strong><em>Physical Evidence</em></strong> (bukti fisik), dan</li>
+            <li><strong><em>Productivity &amp; Quality</em></strong> (produktivitas dan kualitas).</li>
+          </ul>
+        </li>
+        <li><strong>Kategori 5S </strong>yang biasa digunakan dalam industri jasa:
+          <ul style="font-size: var(--ddd-theme-body-font-size); display: flex; flex-flow: column; gap: var(--ddd-spacing-3); font-family: var(--ddd-font-primary); margin: 0 0 var(--ddd-spacing-6) 0; list-style: square; caret-color: var(--hax-ui-caret-color, auto);">
+            <li><strong><em>Surroundings</em></strong> (lingkungan),</li>
+            <li><strong><em>Suppliers</em></strong> (pemasok),</li>
+            <li><strong><em>Systems</em></strong> (sistem),</li>
+            <li><strong><em>Skills</em></strong> (keterampilan), dan</li>
+            <li><strong><em>Safety</em></strong> (keselamatan).</li>
+          </ul>
+        </li>
+        <li>Kategori di atas hanya sebagai saran, kita bisa menggunakan kategori lain yang dapat
+          membantu mengatur gagasan-gagasan. Jumlah kategori biasanya sekitar 4 sampai dengan
+          6 kategori. Kategori pada contoh ini lihat Gambar 2.</li>
+      </ul>
+
+
+
+      <mark-the-words question="Setelah mengidentifikasi berbagai penyebab potensial dalam diagram tulang ikan, langkah selanjutnya yang paling tepat adalah: (pilih 3 kata kunci)" statement="rekening analisis metode lanjut mengidentifikasi setiap akar Melakukan  dari kategori untuk penyebab potensial masalah" max-attempts="0" typeof="oer:Assessment" resource="#11eb8883-e7e7-fdde-b2b5-aca67d371a2e" prefix="oer:http://oerschema.org/ schema:http://schema.org/ dc:http://purl.org/dc/terms/ foaf:http://xmlns.com/foaf/0.1/ cc:http://creativecommons.org/ns# bib:http://bib.schema.org " quiz-name="default" data-hax-lock="data-hax-lock">
+        <input type="checkbox" value="mengidentifikasi" correct="correct" data-selected="good" role="textbox">
+        <input type="checkbox" value="akar" correct="correct" data-selected="bagus">
+        <input type="checkbox" value="kategori" correct="correct" data-selected="lumayan">
+      </mark-the-words>
+
+
+      <h4>Langkah 3: Menemukan sebab-sebab potensial dengan cara brainstorming</h4>
+
+      <media-image source="./files/fishbone-step-3.png" card="" citation="Langkah-langkah ke 3" "="" accent-color=" grey" size="wide" offset="none"></media-image>
+
+      <ul>
+        <li>Setiap kategori mempunyai sebab-sebab yang perlu diuraikan melalui sesi <em>brainstorming</em>.</li>
+      </ul>
+      <ul>
+        <li>Pertanyakan kembali “Mengapa sebab itu muncul?” sehingga “tulang” lebih kecil (sub-sebab)
+          keluar dari garis horisontal tadi, misal: “Mengapa karyawan disebut tidak mengikuti
+          prosedur? Jawab: karena tidak memakai APD” (lihat Gambar 3).</li>
+      </ul>
+
+      <media-image source="./files/pembobol-data.JPG" card="" citation="diagram ikan pembobol data" "="" accent-color=" grey" size="wide" offset="none"></media-image>
+
+      <stop-note title="Cek Pemahaman Anda" accent-color="grey" icon="stopnoteicons:confirm-icon" status="success" message="bWaktunya Diskusi">
+        <p slot="message"><strong>Mengapa penting untuk selalu memeriksa mutasi rekening secara berkala?
+            Apa saja contoh biaya tambahan yang dapat mengurangi saldo rekening? Apa saja contoh masalah keamanan. Jawab
+            apabila belum tepat silakan baca lagi materi.</strong>
+        </p>
+      </stop-note>
+
+
+
+
+      <self-check accent-color="deep-purple" title="MODUS PHISING" image="./files/28290-bank-bri.jpg" alt="phising" resource="#652ec431-aa9c-c1f9-f1cd-002b4a9fa4a8" prefix="oer:http://oerschema.org/ schema:http://schema.org/ dc:http://purl.org/dc/terms/ foaf:http://xmlns.com/foaf/0.1/ cc:http://creativecommons.org/ns# bib:http://bib.schema.org " data-hax-lock="data-hax-lock" data-padding="xs" data-margin="center">Contoh masalah keamanan teknologi yang
+        dapat dianalisis menggunakan diagram tulang
+        ikan.Seorang nasabah menerima email yang mengatasnamakan banknya, meminta untuk mengklik
+        tautan dan memasukkan data pribadi, yang kemudian digunakan oleh penipu untuk mengakses
+        rekening nasabah<span slot="question">Contoh masalah keamanan teknologi yang dapat dianalisis menggunakan
+          diagram tulang ikan.</span><span>Seorang nasabah menerima email yang mengatasnamakan banknya, meminta untuk mengklik tautan dan
+          memasukkan data pribadi, yang kemudian digunakan oleh penipu untuk mengakses rekening nasabah
+        </span>
+      </self-check>
+      <br>
+
+      <p>
+        Di bawah masing-masing kategori, tulislah faktor-faktor spesifik yang mungkin menjadi penyebab pembobolan data
+        perbankan. Contoh, untuk kategori "manusia", maka mungkin yang terjadi adalah akses tidak sah yang dilakukan
+        oleh oknum karyawan, pelatihan keamanan yang kurang, atau kecakapan teknis yang rendah. Kategori teknologi bisa
+        berupa sistem keamanan yang tidak diperbarui.
+      </p>
+      <p>
+        Sementara itu, dari kategori lingkungan bisa disebabkan oleh tidak dikuncinya ruangan server, sedangkan dari
+        kategori proses bisa berupa tidak ada SOP untuk memasuki ruang server.
+      </p>
+
+      <br>
+
+      <learning-component accent-color="red" type="assessment" subtitle="TULIS 7" title="Assessment" icon="lrn:assessment" data-grid-saved-settings="{}">
+        <p>Bagaimana cara mengidentifikasi tulang kecil dan potensial masalah dalam diagram tulang ikan?"</p>
+
+      </learning-component>
+      <!-- akhir div -->
+
+    </div>
+
+
+    <div slot="content-8">
+
+      <h5>Tulang Utama:</h5>
+      <p>
+
+        Kesalahan Sistem: Kesalahan dalam sistem perbankan, kesalahan pencatatan, atau bug dalam sistem.
+        Penipuan: Skimming, phishing, atau bentuk penipuan lainnya.
+        Biaya Tambahan: Potongan biaya yang tidak diketahui nasabah, seperti biaya administrasi, biaya overdraft, atau
+        biaya transaksi otomatis.
+        Transaksi Tak Terotorisasi: Transaksi yang dilakukan tanpa izin nasabah, seperti autodebet yang lupa dibatalkan.
+      </p>
+      <p>
+        </p><h5>
+
+          Duri-Duri Kecil:
+        </h5>
+
+        Kesalahan Manusia: Kesalahan dalam memasukkan data oleh petugas bank.
+        Kelemahan Keamanan: Password yang mudah ditebak, penggunaan jaringan Wi-Fi publik yang tidak aman.
+        Kurangnya Informasi: Nasabah tidak memahami biaya-biaya yang dikenakan oleh bank.
+        Kegagalan Verifikasi: Proses verifikasi transaksi yang tidak ketat.
+      <p></p>
+
+      <learning-component accent-color="red" type="assessment" subtitle="TULIS 8" title="Assessment" icon="lrn:assessment" data-grid-saved-settings="{}">
+
+        <p>Apa saja pertanyaan yang perlu diajukan untuk menemukan duri-duri kecil dalam diagram tulang ikan?</p>
+      </learning-component>
+
+    </div>
+
+    <div slot="content-9">
+      <h4>Langkah 4: Mengkaji dan menyepakati sebab-sebab yang paling mungkin</h4>
+
+      <media-image source="./files/fishbone-step-4.PNG" card="" citation="Langkah 4" accent-color="grey" size="wide" offset="none"></media-image>
+
+        Dari contoh di atas, fishbone diagram dapat menemukan akar permasalahan, yaitu kabut oli selama ini dibersihkan dengan ditampung di bag plastik yang rentan robek dan selama tidak ada bag plastik ada kemungkinan oli menetes jika kran rusak, solusi bisa dengan menambahkan containment tray atau safety cabinet yang permanen menempel pada pipa.
+
+        <media-image source="./files/brainstrom.jpg" card="" citation="Kabut oli" accent-color="grey" size="wide" offset="none"></media-image>
+
+<p>
+
+  Jika masalah rumit dan waktunya memungkinkan, kita bisa meninggalkan fishbone diagram di dinding selama beberapa hari untuk membiarkan ide menetas dan membiarkan orang yang lalu lalang turut berkontribusi. Jika  fishbone diagram terlihat timpang atau sempit, kita bisa mengatur ulang fishbone diagram dengan kategori sebab utama yang berbeda. 
+</p>
+  <p>
+    
+  Kunci sukses fishbone diagram adalah terus bertanya “Mengapa?”, lihatlah diagram dan carilah pola tanpa banyak bicara, dan libatkan orang-orang di “grass root” yang terkait dengan masalah karena biasanya mereka lebih mengerti  permasalahan di lapangan.
+</p>
+
+
+      <ul>
+        <li>Setelah setiap kategori diisi carilah sebab yang paling mungkin di antara semua
+          sebab-sebab dan sub-subnya.</li>
+      </ul>
+      <ul>
+        <li>Pertanyaan “Mengapa?” akan membantu kita sampai pada sebab pokok dari permasalahan
+          teridentifikasi.</li>
+        <li>Tanyakan “Mengapa ?” sampai saat pertanyaan itu tidak bisa dijawab lagi. Kalau sudah
+          sampai ke situ sebab pokok telah terindentifikasi.</li>
+        <li>Lingkarilah sebab yang tampaknya paling memungkin pada <em>fishbone diagram</em> (lihat
+          Gambar Di Atas).</li>
+      </ul>
+
+      <self-check accent-color="light-blue" title="DIAGRAM TULANG IKAN" image="./files/Diagram-Fishbone-produksi.webp" alt="Penurunan Produksi" resource="#81619a72-9490-a893-4735-f00b15f702ec" prefix="oer:http://oerschema.org/ schema:http://schema.org/ dc:http://purl.org/dc/terms/ foaf:http://xmlns.com/foaf/0.1/ cc:http://creativecommons.org/ns# bib:http://bib.schema.org ">
+        <span slot="question">
+          Bagaimana cara mengidentifikasi tulang kecil dan potensial masalah dalam diagram
+        tulang ikan?
+        </span>
+        <span>
+          Tanyakan “Mengapa ?” sampai saat pertanyaan itu tidak bisa dijawab lagi.
+         Kalau sudah sampai ke situ sebab pokok telah terindentifikasi.
+        </span>
+      </self-check>
+
+      <h5>
+
+        Akar Masalah Potensial:
+      </h5>
+      <ul>
+        <li>
+          Kelemahan Sistem Keamanan: Sistem perbankan yang rentan terhadap serangan siber atau kesalahan manusia.
+        </li>
+        <li>
+          Kurangnya Transparansi: Informasi mengenai biaya dan transaksi tidak disampaikan dengan jelas kepada nasabah.
+        </li>
+        <li>
+          Kesalahan Manusia: Baik dari pihak bank maupun nasabah.
+        </li>
+      </ul>
+
+
+
+      <stop-note accent-color="grey" icon="stopnoteicons:confirm-icon" status="stop" message="bWaktunya Diskusi" title="">
+        <p slot="message"><strong>Cari sebab hingga tidak ada jawaban</strong>. Bagaimana peran biometrik (sidik jari, wajah, suara) dalam meningkatkan keamanan transaksi perbankan? 
+        </p>
+      </stop-note>
+
+
+      <h5>
+        Solusi Potensial:
+      </h5>
+      <ul>
+        <li>
+          Penguatan Keamanan: Implementasi sistem keamanan yang lebih canggih, seperti verifikasi dua faktor, enkripsi
+          data, dan pemantauan transaksi secara real-time.
+        </li>
+        <li>
+          Transparansi Informasi: Memberikan informasi yang jelas dan detail mengenai biaya-biaya yang dikenakan, serta
+          memberikan laporan transaksi secara rutin kepada nasabah.
+
+        </li>
+        <li>
+          Pendidikan Nasabah: Melakukan edukasi kepada nasabah mengenai cara menjaga keamanan rekening, mengenali
+          tanda-tanda penipuan, dan melaporkan transaksi yang mencurigakan.
+
+        </li>
+        <li>
+
+          Prosedur Verifikasi yang Lebih Ketat: Memperketat prosedur verifikasi untuk setiap transaksi, terutama untuk
+          transaksi yang bernilai besar atau tidak biasa.
+        </li>
+      </ul>
+
+      <learning-component accent-color="red" type="assessment" subtitle="TULIS 9" title="Assessment" icon="lrn:assessment" data-grid-saved-settings="{}">
+
+        <p>Gambarlah diagram tulang ikan sesuai permasalahan Temanmu yang kamu lihat!</p>
+      </learning-component>
+
+
+    </div>
+
+    <div slot="content-10">
+
+      <h5>Contoh Kasus Kehilangan Barang di Toko. Tingginya tingkat kehilangan barang di suatu lokasi.</h5>
+
+      <media-image source="./files/barang-hilang-diagram.jpg" card="" citation="Aksi Skimming" accent-color="grey" size="wide" offset="none"></media-image>
+      
+    
+<ul>
+  Memahami Diagram
+
+  Diagram tulang ikan membagi penyebab masalah menjadi beberapa kategori utama:
+</ul>
+  <li>
+    Alat: Masalah terkait dengan peralatan yang digunakan, seperti tidak adanya alat deteksi logam atau kurangnya alat pemeriksaan tubuh.
+    
+  </li>    
+  <li>
+    Cara: Masalah terkait dengan prosedur atau metode yang digunakan, seperti tidak adanya pengecekan tubuh secara menyeluruh atau SOP yang tidak ditaati.
+    
+  </li>    
+  <li>
+    Orang: Masalah terkait dengan faktor manusia, seperti jumlah petugas keamanan yang kurang, petugas yang tidak teliti, atau karyawan yang membawa barang terlalu banyak.
+    
+  </li>    
+  <li>
+    Lingkungan: Masalah terkait dengan kondisi lingkungan, seperti area yang terlalu luas atau kurangnya pencahayaan.
+    
+  </li>    
+  <li>
+
+    Bahan: Masalah terkait dengan bahan yang dibawa, seperti barang-barang berukuran kecil yang sulit terdeteksi.
+  </li>
+      
+
+
+      <learning-component accent-color="red" type="assessment" subtitle="TULIS 10-11" title="Assessment" icon="lrn:assessment" data-grid-saved-settings="{}">
+
+      <li>
+        10. Gambarlah diagram tulang ikan sesuai permasalahan Temanmu yang kamu lihat!<p></p>
+      </li>
+      <li>
+        11. Bagaimana cara mengevaluasi apakah diagram tulang ikan yang telah dibuat sudah akurat dan lengkap?
+      </li>
+    </learning-component>
+  </div>
+
+
+<div slot="content-11">
+
+  <h5>Contoh Kasus Keamanan Jaringan Internet</h5>
+
+  <media-image source="./files/jaringan.PNG" card="" citation="Peluang Keamanan Jaringan" accent-color="grey" size="wide" offset="none"></media-image>
+  <h5>
+
+    Solusi yang dapat dipertimbangkan untuk meningkatkan keamanan jaringan adalah:
+  </h5>
+<ul>
+  <li>
+    
+  </li>
+  <li>
+    Memilih metode yang tepat: Lakukan studi banding untuk memilih metode yang paling sesuai dengan kebutuhan dan kondisi jaringan.
+  
+  </li>
+  <li>
+    Melakukan identifikasi secara berkala: Lakukan analisis data jaringan secara rutin untuk mengidentifikasi potensi ancaman baru.
+   
+  </li>
+  <li>
+    Melakukan pengujian secara rutin: Lakukan pengujian penetrasi atau vulnerability assessment secara berkala untuk menguji tingkat keamanan jaringan.
+    
+  </li>
+  <li>
+    Memilih perangkat yang memiliki fitur keamanan yang baik: Pertimbangkan untuk menggunakan perangkat yang memiliki sertifikasi keamanan.
+    
+  </li>
+  <li>
+    Melakukan konfigurasi yang benar: Pastikan semua perangkat dikonfigurasi dengan benar untuk memaksimalkan fitur keamanan.
+  
+    
+  </li>
+  <li>
+    Melakukan pelatihan kepada personel: Latih personel IT agar memahami pentingnya keamanan jaringan dan cara mengoperasikan sistem keamanan.
+  </li>
+</ul>
+
+
+<learning-component accent-color="red" type="assessment" subtitle="TULIS 12" title="Assessment" icon="lrn:assessment" data-grid-saved-settings="{}">
+<p>Siswa membaca hasil kerjanya  tentang cara menyelesaikan masalah.</p>
+<p>Tuliskan apa kamu setuju dengan jawaban temanmu beserta alasannya!</p>
+</learning-component>
+
+</div>
+
+<div slot="content-12">
+
+<h4>Siswa untuk merefleksikan proses pembelajaran dan hasil yang diperoleh.</h4>
+
+  <learning-component type="reflect" accent-color="amber" subtitle="Tulis 13-14" title="REFLEKSI" icon="courseicons:strategy">
+    <p>Pada akhir pelajaran tentang diagram tulang ikan Anda sudah dapat menyelesaikan
+      masalah sehari-hari secara efektif dan efisien.</p>
+      <p>13. Bagaimana pengalaman ini dapat membantu Anda dalam menyelesaikan masalah di kehidupan sehari-hari?
+      </p>
+        <p>14. Tuliskan kesimpulan dari penyampaian materi hari ini
+        </p>
+
+    </learning-component>
+</div>
+</media-tik2>
+
+<script>
+  globalThis.MicroFrontendRegistryConfig = globalThis.MicroFrontendRegistryConfig || {};
+  globalThis.HAXCMSContext="php";document.body.removeAttribute('no-js');globalThis.__appCDN="./";globalThis.__appForceUpgrade=false;</script>
+<script src="bde1d33a.js"></script>
+<script src="b5ce0759.js"></script>
+
+<script type="module" src="./e15215ac.js"></script></body></html>
