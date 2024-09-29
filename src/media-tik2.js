@@ -34,9 +34,9 @@ export class mediaTik2 extends DDDSuper(LitElement) {
         margin: auto;
         color: var(--ddd-theme-primary);
         /* background-color: var( */
-          --simple-colors-default-theme-indigo-3
+          /* --simple-colors-default-theme-indigo-3; */
           /* --ddd-theme-default-linkLight */
-        );
+        
         font-family: var(--ddd-font-navigation);
         font-size: var(--app-todo-font-size, var(--ddd-font-size-s));
       }
