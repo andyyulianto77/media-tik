@@ -24,7 +24,7 @@ export default {
     nodeResolve(),
     /** Minify JS, compile JS to a lower language target */
     esbuild({
-      minify: false,
+      minify: true,
       target: ['chrome64', 'firefox67', 'safari11.1'],
     }),
     /** Bundle assets references via import.meta.url */
@@ -36,14 +36,14 @@ export default {
           'babel-plugin-template-html-minifier',
           {
             modules: { lit: ['html', { name: 'css', encapsulation: 'style' }] },
-            failOnError: false,
-            strictCSS: false,
+            failOnError: true,
+            strictCSS: true,
             htmlMinifier: {
               collapseWhitespace: true,
               conservativeCollapse: true,
               removeComments: true,
               caseSensitive: true,
-              minifyCSS: false,
+              minifyCSS: true,
             },
           },
         ],
