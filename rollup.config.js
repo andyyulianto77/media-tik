@@ -24,7 +24,7 @@ export default {
     nodeResolve(),
     /** Minify JS, compile JS to a lower language target */
     esbuild({
-      minify: true,
+      minify: false,
       target: ['chrome64', 'firefox67', 'safari11.1'],
     }),
     /** Bundle assets references via import.meta.url */
@@ -37,13 +37,13 @@ export default {
           {
             modules: { lit: ['html', { name: 'css', encapsulation: 'style' }] },
             failOnError: false,
-            strictCSS: true,
+            strictCSS: false,
             htmlMinifier: {
               collapseWhitespace: true,
               conservativeCollapse: true,
               removeComments: true,
               caseSensitive: true,
-              minifyCSS: true,
+              minifyCSS: false,
             },
           },
         ],
