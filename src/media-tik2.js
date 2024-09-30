@@ -28,7 +28,7 @@ export class mediaTik2 extends DDDSuper(LitElement) {
     return [super.styles,
     css`
       :host {
-        display: block;
+        // display: block;
         min-height: 0;
         /* max-width: 600px; */
         margin: auto;
